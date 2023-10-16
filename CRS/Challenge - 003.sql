@@ -35,3 +35,11 @@ FROM hcm.employees
 ORDER BY salary DESC
 
 -- 6 retornar employee_id, first_name, salary dos employee ou employees que são menos pagos.
+
+SELECT TOP (1) WITH TIES
+	employee_id,
+	first_name,
+	last_name,
+	salary
+FROM hcm.employees
+ORDER BY salary ASC;
